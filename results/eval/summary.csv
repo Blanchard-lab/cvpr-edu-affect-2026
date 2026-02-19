@@ -1,0 +1,3 @@
+model,n,accuracy,macro_f1,neutral_rate
+openface,73,0.0000,0.0000,0.5068
+libreface,72,1.0000,0.1429,0.4583
