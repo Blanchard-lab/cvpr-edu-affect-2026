@@ -19,9 +19,11 @@ eggs/
 lib/
 lib64/
 parts/
+tmp/
 sdist/
 var/
 wheels/
+weights_libreface/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
