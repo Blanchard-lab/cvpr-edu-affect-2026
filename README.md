@@ -129,3 +129,5 @@ Procedure:
 **TO REPRODUCE OUR EXPERIMENTS SIMPLY RUN THE SCRIPTS IN THE ORDER**
 
 To modify/extend, consult src/ and write additional scripts to apply your added functionality in src. 
+
+TO DO: Add links to model weights/repos/data and environment.yml files with instructions
