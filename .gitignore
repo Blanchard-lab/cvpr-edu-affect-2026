@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+data/affectnet_subset
 data/raw/
 data/interim/
 develop-eggs/
