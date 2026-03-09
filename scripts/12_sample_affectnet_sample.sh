@@ -7,7 +7,7 @@ AFFECTNET_ROOT="${AFFECTNET_ROOT:-data/affectnet_subset}"
 LABELS_CSV="${LABELS_CSV:-data/affectnet_subset/labels.csv}"
 OUT_CSV="${OUT_CSV:-data/processed/affectnet_sample_200.csv}"
 
-N_SAMPLES="${N_SAMPLES:-3000}"
+N_SAMPLES="${N_SAMPLES:-301}"
 SEED="${SEED:-42}"
 
 "$PYTHON_BIN" -m src.dataset.sample_affectnet_subset \

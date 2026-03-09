@@ -1,0 +1,38 @@
+{
+  "model_a": "openface",
+  "model_b": "posterpp",
+  "n_joined_instances": 304,
+  "n_gt_vs_model_a_pairs": 277,
+  "n_gt_vs_model_b_pairs": 277,
+  "n_model_a_vs_model_b_pairs": 304,
+  "gt_label_set": [
+    "Curious",
+    "Confused",
+    "Disengaged",
+    "Surprised",
+    "Conflicted",
+    "Optimistic",
+    "Frustrated"
+  ],
+  "pred_label_set": [
+    "Neutral",
+    "Surprise",
+    "Disgust",
+    "Happy",
+    "Contempt",
+    "Sad",
+    "Angry",
+    "Fear"
+  ],
+  "groups": [
+    "group-10",
+    "group-2",
+    "group-3",
+    "group-4",
+    "group-5",
+    "group-6",
+    "group-7",
+    "group-8",
+    "group-9"
+  ]
+}

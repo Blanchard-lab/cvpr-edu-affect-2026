@@ -20,13 +20,12 @@ def read_matrix_csv(path: Path):
 
 def plot_heatmap(mat, row_labels, col_labels, title, out_path: Path, save_pdf: bool):
     out_path.parent.mkdir(parents=True, exist_ok=True)
-
     fig_w = max(7, 0.9 * len(col_labels))
     fig_h = max(5, 0.7 * len(row_labels))
     vmin, vmax = mat.min(), mat.max()
     norm = plt.Normalize(vmin=vmin, vmax=vmax)
     fig, ax = plt.subplots(figsize=(fig_w, fig_h))
-    im = ax.imshow(mat, aspect="auto", cmap="YlGnBu", norm=norm)
+    im = ax.imshow(mat, aspect="auto", cmap="YlOrRd", norm=norm)
     
 
     ax.set_title(title)
@@ -38,7 +37,7 @@ def plot_heatmap(mat, row_labels, col_labels, title, out_path: Path, save_pdf: b
     ax.set_yticklabels(row_labels)
 
     is_float = np.any(np.mod(mat, 1) != 0)
-    cmap = plt.get_cmap("YlGnBu")
+    cmap = plt.get_cmap("YlOrRd")
     for i in range(mat.shape[0]):
         for j in range(mat.shape[1]):
             v = mat[i, j]
@@ -47,7 +46,7 @@ def plot_heatmap(mat, row_labels, col_labels, title, out_path: Path, save_pdf: b
             luminance = 0.2126 * rgba[0] + 0.7152 * rgba[1] + 0.0722 * rgba[2]
             text_color = "black" if luminance > 0.4 else "white"
             ax.text(j, i, txt, ha="center", va="center", fontsize=8,
-                    color=text_color, fontweight="bold")
+                    color=text_color)
 
     cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04)
     cbar.set_label("Proportion" if is_float else "Count")

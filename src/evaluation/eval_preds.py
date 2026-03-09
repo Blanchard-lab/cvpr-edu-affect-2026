@@ -191,8 +191,8 @@ def main():
     gt_labels = unique_in_order(gt_all)
     pred_labels = unique_in_order(of_all + lf_all)
 
-    if not pred_labels:
-        pred_labels = ["Neutral", "Happy", "Sad", "Angry", "Surprise", "Fear", "Disgust"]
+    # if not pred_labels:
+    pred_labels = ["Neutral", "Surprise", "Disgust", "Happy", "Sad", "Angry", "Fear"]
 
     cm_gt_of = make_matrix(gt_labels, pred_labels, gt_open_pairs)
     cm_gt_lf = make_matrix(gt_labels, pred_labels, gt_lib_pairs)

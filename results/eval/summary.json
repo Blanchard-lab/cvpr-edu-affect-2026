@@ -17,9 +17,9 @@
     "Surprise",
     "Disgust",
     "Happy",
-    "Contempt",
     "Sad",
-    "Angry"
+    "Angry",
+    "Fear"
   ],
   "groups": [
     "group-10",

@@ -4,6 +4,8 @@ import sys
 from pathlib import Path
 
 import cv2
+print(cv2.__version__)
+print(cv2.data.haarcascades)
 import numpy as np
 import torch
 
@@ -12,11 +14,21 @@ def load_image_rgb(path: str):
     img = cv2.imread(path)
     if img is None:
         return None
-    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    detector = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+    faces = detector.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5)
+    
+    if len(faces) == 0:
+        return None
+    
+    x, y, w, h = faces[0]
+    img = img[y:y+h, x:x+w]
+    img = cv2.resize(img, (224, 224), interpolation=cv2.INTER_LINEAR)
+    cv2.imwrite(path, img)
     return img
 
-
-def to_tensor(face):
+def to_tensor(face): 
     return torch.from_numpy(face).permute(2, 0, 1).float().unsqueeze(0) / 255.0
 
 
@@ -59,12 +71,12 @@ def main():
     with out_csv.open("w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
-
+        emotion_map = {'Neutral':0, 'Happy':0, 'Sad':0, 'Surprise':0, 'Fear':0, 'Disgust':0, 'Anger':0, 'Contempt':0}
         for row in rows:
             img = load_image_rgb(row["image_path"])
             if img is None:
                 continue
-
+            print("SHAPE:",img.shape)    
             x = to_tensor(img).to(device)
 
             with torch.no_grad():
@@ -73,15 +85,17 @@ def main():
             logits_np = emotion_logits.detach().cpu().numpy()[0]
             probs = softmax_np(logits_np)
             pred_idx = int(np.argmax(probs))
+            print(pred_idx)
             pred_label = emotion_classes[pred_idx]
 
             out_row = dict(row)
             out_row["pred_label"] = pred_label
             out_row["pred_idx"] = pred_idx
+            emotion_map[pred_label] += 1
             writer.writerow(out_row)
-
+        print(emotion_map)
     print(f"Wrote: {out_csv}")
-
+    
 
 if __name__ == "__main__":
     main()

@@ -15,8 +15,7 @@ LABEL_MAP = {
     "Disgust": "Disgust",
     "Contempt": "Contempt",
 }
-
-
+   
 def normalize_label(x: str) -> str:
     x = str(x).strip()
     return LABEL_MAP.get(x, x)
@@ -43,8 +42,10 @@ def main():
 
         for row in rows:
             try:
-                attrs = libreface.get_facial_attributes(row["image_path"])
+                img = row["image_path"]
+                attrs = libreface.get_facial_attributes(img)
                 pred = normalize_label(attrs.get("facial_expression", ""))
+                print("PREDICTION:", pred)
             except Exception:
                 pred = ""
 
