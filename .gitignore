@@ -23,6 +23,7 @@ lib64/
 parts/
 tmp/
 sdist/
+sampled_data/
 var/
 wheels/
 weights_libreface/
