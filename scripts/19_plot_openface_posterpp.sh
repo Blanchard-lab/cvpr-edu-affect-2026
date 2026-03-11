@@ -13,5 +13,5 @@ PYTHONNOUSERSITE=1 "$PYTHON_BIN" -m src.evaluation.plot_pairwise_matrices \
   --eval_dir "$EVAL_DIR" \
   --fig_dir "$FIG_DIR" \
   --model_a_name "openface" \
-  --model_b_name "posterpp" \
+  --model_b_name "ddamfn" \
   --save_pdf "$SAVE_PDF"

@@ -1,6 +1,6 @@
 {
   "model_a": "openface",
-  "model_b": "posterpp",
+  "model_b": "ddamfn",
   "n_joined_instances": 304,
   "n_gt_vs_model_a_pairs": 277,
   "n_gt_vs_model_b_pairs": 277,

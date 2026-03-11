@@ -19,5 +19,5 @@ mkdir -p "$OUT_DIR"
   --model_a_csv "$OPENFACE_CSV" \
   --model_b_csv "$POSTERPP_CSV" \
   --model_a_name "openface" \
-  --model_b_name "posterpp" \
+  --model_b_name "ddamfn" \
   --eval_split "$EVAL_SPLIT"
