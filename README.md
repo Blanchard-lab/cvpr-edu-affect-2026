@@ -5,8 +5,6 @@ This repository contains the experimental pipeline used in our study evaluating 
 
 The repository provides tools for dataset preprocessing, running inference using multiple FER models, and performing analyses including cross-taxonomy alignment, dimensional affect structure, and cross-model agreement.
 
----
-
 ## Overview
 
 Most FER models are trained on large-scale web datasets such as AffectNet. These datasets are annotated using basic emotion categories (e.g., happy, sad, anger) and sometimes dimensional representations (valence and arousal).
