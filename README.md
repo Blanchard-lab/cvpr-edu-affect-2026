@@ -1,6 +1,4 @@
 # Evaluating Web-trained Facial Expression Recognition Models in Collaborative Learning
-<img width="649" height="451" alt="teaser (1)" src="https://github.com/user-attachments/assets/75b37e15-346d-4633-ada7-044cc2be4312" />
-
 
 
 This repository contains the experimental pipeline used in our study evaluating how pretrained facial expression recognition (FER) models behave in collaborative learning settings. The goal of this project is to examine whether common FER outputs—categorical basic emotions and dimensional valence–arousal representations—align with epistemic affective states such as curiosity, confusion, and frustration observed in collaborative problem-solving.
@@ -165,8 +163,7 @@ We did not use CAGE as we were unable to retrieve the pretrained weights from th
 
 ### Running
 
-Use the scripts to run specific parts of our experimental pipeline. Some depend on outputs from previous scripts, so best to run them in order. Feel free to adjust the pipeline as you explore the codebase
-, in many cases the ordering was arbitrary and was based on the timeline of our experimental design decisions.
+Use the scripts to run specific parts of our experimental pipeline. Some depend on outputs from previous scripts, so best to run them in order. Feel free to adjust the pipeline as you explore the codebase, in many cases the ordering was arbitrary and was based on the timeline of our experimental design decisions.
 
 
 
