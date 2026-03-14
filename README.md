@@ -1,5 +1,7 @@
 # Evaluating Web-trained Facial Expression Recognition Models in Collaborative Learning
 
+![teaser image](assets/teaser_new.png)
+
 
 This repository contains the experimental pipeline used in our study evaluating how pretrained facial expression recognition (FER) models behave in collaborative learning settings. The goal of this project is to examine whether common FER outputs—categorical basic emotions and dimensional valence–arousal representations—align with epistemic affective states such as curiosity, confusion, and frustration observed in collaborative problem-solving.
 
