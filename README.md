@@ -1,13 +1,9 @@
 # Evaluating Web-trained Facial Expression Recognition Models in Collaborative Learning
 <img width="649" height="451" alt="teaser (1)" src="https://github.com/user-attachments/assets/75b37e15-346d-4633-ada7-044cc2be4312" />
 
-
-
 This repository contains the experimental pipeline used in our study evaluating how pretrained facial expression recognition (FER) models behave in collaborative learning settings. The goal of this project is to examine whether common FER outputs—categorical basic emotions and dimensional valence–arousal representations—align with epistemic affective states such as curiosity, confusion, and frustration observed in collaborative problem-solving.
 
 The repository provides tools for dataset preprocessing, running inference using multiple FER models, and performing analyses including cross-taxonomy alignment, dimensional affect structure, and cross-model agreement.
-
----
 
 ## Overview
 
@@ -34,8 +30,6 @@ The experimental workflow includes:
 5. Comparing agreement across different FER architectures
 6. Comparing behavior on educational data vs AffectNet benchmark data
 
----
-
 ## Pipeline
 
 ### 1. Frame Sampling
@@ -45,8 +39,6 @@ For each affect report at time \(t\), we collect all cropped face images within 
 From this pool we randomly sample **K = 10 frames** to represent the instance.
 
 This creates a dataset of labeled face crops used for model inference.
-
----
 
 ### 2. Model Inference
 
@@ -67,15 +59,11 @@ Instance-level prediction is obtained via:
 - **OpenFace 3.0:** mean probability vector
 - **Other models:** majority vote across sampled frames
 
----
-
 #### Dimensional models
 
 - EmotiEffLib
 
 Instance-level predictions are computed by averaging across frames.
-
----
 
 ### 3. Evaluation
 
@@ -87,8 +75,6 @@ Compare predicted basic emotions with epistemic labels using confusion matrices.
 
 Goal: determine whether epistemic states map to consistent emotion predictions.
 
----
-
 #### Dimensional affect structure
 
 Visualize valence–arousal outputs:
@@ -98,8 +84,6 @@ Visualize valence–arousal outputs:
 - clustering behavior
 
 Goal: determine whether epistemic states occupy distinct regions in affect space.
-
----
 
 #### Cross-model agreement
 
@@ -111,7 +95,6 @@ OpenFace vs LibreFace
 
 Low agreement indicates instability under domain shift.
 
----
 
 ### 4. AffectNet Control Experiment
 
