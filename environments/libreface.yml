@@ -1,4 +1,4 @@
-name: libreface_sifat
+name: libreface
 channels:
   - conda-forge
   - defaults
@@ -86,4 +86,3 @@ dependencies:
       - triton==2.0.0
       - webencodings==0.5.1
       - zipp==3.23.0
-prefix: /s/babbage/h/nobackup/nblancha/conda/mar2025/envs/libreface_sifat

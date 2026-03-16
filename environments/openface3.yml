@@ -1,4 +1,4 @@
-name: openface3-sifat
+name: openface3
 channels:
   - conda-forge
   - defaults
@@ -91,4 +91,3 @@ dependencies:
   - wheel=0.45.1=pyhd8ed1ab_1
   - zeromq=4.3.5=h3b0a872_7
   - zipp=3.23.0=pyhd8ed1ab_0
-prefix: /s/babbage/h/nobackup/nblancha/conda/mar2025/envs/openface3-sifat

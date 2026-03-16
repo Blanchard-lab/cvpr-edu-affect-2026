@@ -1,4 +1,4 @@
-name: hsemotion-sifat
+name: hsemotion
 channels:
   - conda-forge
   - defaults
@@ -60,4 +60,3 @@ dependencies:
       - sounddevice==0.5.5
       - sympy==1.14.0
       - typing-extensions==4.15.0
-prefix: /s/babbage/h/nobackup/nblancha/conda/mar2025/envs/hsemotion-sifat

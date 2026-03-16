@@ -126,10 +126,10 @@ To create and activate a particular conda environment `[environment_name]`, go i
 Here are the environments we are currently using:
 
 1) `mist` - for tabular preprocessing, analysis and plotting
-2) `openface3-sifat` - for running scripts that use OpenFace 3
-3) `libreface_sifat` - for running scripts that use LibreFace
-4) `poster2-sifat` - for running scripts that use POSTER++ and DDAMFN (no package conflicts between the two)
-5) `hsemotion-sifat` - for running scripts that use EmotiEffLib
+2) `openface3` - for running scripts that use OpenFace 3
+3) `libreface` - for running scripts that use LibreFace
+4) `poster2` - for running scripts that use POSTER++ and DDAMFN (no package conflicts between the two)
+5) `hsemotion` - for running scripts that use EmotiEffLib
 
 If you are getting package dependency errors, most likely you are not using the right environment.
 
