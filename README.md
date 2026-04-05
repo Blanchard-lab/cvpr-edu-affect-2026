@@ -1,17 +1,16 @@
-# Evaluating Web-trained Facial Expression Recognition Models in Collaborative Learning
+# Evaluating Web-trained Facial Expression Recognition Models in Collaborative Problem-Solving
 
 ![teaser image](assets/teaser_new.png)
 
-
-This repository contains the experimental pipeline used in our study evaluating how pretrained facial expression recognition (FER) models behave in collaborative learning settings. The goal of this project is to examine whether common FER outputs—categorical basic emotions and dimensional valence–arousal representations—align with epistemic affective states such as curiosity, confusion, and frustration observed in collaborative problem-solving.
+This repository contains the code used in our study evaluating pretrained facial expression recognition (FER) models in collaborative problem-solving settings. The goal of the study is to examine whether common FER outputs—categorical basic emotions and dimensional valence–arousal representations—align with epistemic affective states such as curiosity, confusion, and frustration observed in collaborative problem-solving. The study will be published in the proceedings of the IEEE/CVF Computer Society Conference on Computer Vision and Pattern Recognition Workshops (CVPRW) 2026.
 
 The repository provides tools for dataset preprocessing, running inference using multiple FER models, and performing analyses including cross-taxonomy alignment, dimensional affect structure, and cross-model agreement.
 
 ## Overview
 
-Most FER models are trained on large-scale web datasets such as AffectNet. These datasets are annotated using basic emotion categories (e.g., happy, sad, anger) and sometimes dimensional representations (valence and arousal).
+Most FER models are trained on large web-scale datasets such as AffectNet. These datasets are annotated using basic emotion categories (e.g., happy, sad, anger) and sometimes dimensional representations (valence and arousal).
 
-However, affective states relevant to collaborative problem-solving are often **epistemic emotions** -- which means they are learning relevant, including:
+However, affective states relevant to collaborative problem-solving are often **epistemic emotions** -- which means they are learning relevant, including (but not limited to):
 
 - Curious
 - Confused
@@ -21,7 +20,7 @@ However, affective states relevant to collaborative problem-solving are often **
 - Surprised
 - Conflicted
 
-This project evaluates whether pretrained FER models produce meaningful signals for these states when applied to collaborative learning data.
+Here, we evaluates whether pretrained FER models produce meaningful signals for these states when applied to collaborative learning data.
 
 The experimental workflow includes:
 
@@ -42,7 +41,6 @@ From this pool we randomly sample **K = 10 frames** to represent the instance.
 
 This creates a dataset of labeled face crops used for model inference.
 
-
 ### 2. Model Inference
 
 We evaluate several pretrained FER models.
@@ -54,14 +52,15 @@ We evaluate several pretrained FER models.
 - POSTER++
 - DDAMFN
 - EmotiEffLib
-
+- Qwen-2.5-VL (Foundational VLM Baseline)
+  
 Each frame produces a categorical emotion prediction.
 
 Instance-level prediction is obtained via:
 
 - **OpenFace 3.0:** mean probability vector
 - **Other models:** majority vote across sampled frames
-
+  
 #### Dimensional models
 
 - EmotiEffLib
@@ -147,6 +146,8 @@ We did not use CAGE as we were unable to retrieve the pretrained weights from th
 3) POSTER++ -- inside models/, clone `https://github.com/Talented-Q/POSTER_V2.git`. Download the checkpoints and put them in their respective locations.
 4) DDAMFN - inside models/, clone `https://github.com/SainingZhang/DDAMFN.git`. Checkpoints are available in the git repo.
 5) EmotiEffLib - inside models/, clone `https://github.com/sb-ai-lab/EmotiEffLib.git`. Checkpoints are available in the git repo.
+
+We would like to add CAGE in future. If you are a researcher who have been able to run CAGE locally, feel free to open an issue describing how you did that.
 
 ### Running
 
