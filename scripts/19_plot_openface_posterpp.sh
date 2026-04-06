@@ -4,7 +4,7 @@ set -euo pipefail
 PYTHON_BIN="${PYTHON_BIN:-python3}"
 
 EVAL_DIR="${EVAL_DIR:-results/eval_openface_posterpp}"
-FIG_DIR="${FIG_DIR:-results/figures_openface_posterpp}"
+FIG_DIR="${FIG_DIR:-results/figures_openface_ddamfn}"
 SAVE_PDF="${SAVE_PDF:-1}"
 
 mkdir -p "$FIG_DIR"

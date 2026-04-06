@@ -1,8 +1,8 @@
 ,Neutral,Surprise,Disgust,Happy,Contempt,Sad,Angry,Fear
-Curious,53,1,2,11,0,5,1,0
-Confused,29,1,1,14,0,9,0,0
-Disengaged,12,0,0,3,0,2,0,0
-Surprised,6,0,1,8,0,1,0,0
-Conflicted,10,0,3,10,0,0,0,0
-Optimistic,47,2,1,21,0,7,0,0
-Frustrated,9,1,0,5,0,1,0,0
+Curious,61,0,0,10,0,2,0,0
+Confused,37,0,1,15,0,1,0,0
+Disengaged,13,0,0,4,0,0,0,0
+Surprised,10,0,0,6,0,0,0,0
+Conflicted,16,0,0,7,0,0,0,0
+Optimistic,58,0,0,20,0,0,0,0
+Frustrated,12,1,0,3,0,0,0,0

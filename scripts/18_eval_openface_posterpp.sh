@@ -7,7 +7,7 @@ SPLITS_JSON="${SPLITS_JSON:-data/processed/splits_groups.json}"
 OUT_DIR="${OUT_DIR:-results/eval_openface_posterpp}"
 
 OPENFACE_CSV="${OPENFACE_CSV:-data/processed/preds_openface_k10_m5.csv}"
-POSTERPP_CSV="${POSTERPP_CSV:-data/processed/preds_posterpp_k10_m5.csv}"
+POSTERPP_CSV="${POSTERPP_CSV:-data/processed/preds_ddamfn_k10_m5.csv}"
 
 EVAL_SPLIT="${EVAL_SPLIT:-all}"
 

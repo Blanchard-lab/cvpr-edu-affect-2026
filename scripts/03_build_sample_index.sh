@@ -8,7 +8,7 @@ REPORTS_CSV="${REPORTS_CSV:-data/raw/metadata/reports-agg.csv}"
 OUT_DIR="${OUT_DIR:-data/processed}"
 
 K_FRAMES="${K_FRAMES:-10}"
-MARGIN_S="${MARGIN_S:-5}"
+MARGIN_S="${MARGIN_S:-1}"
 SEED="${SEED:-42}"
 
 TEST_GROUPS="${TEST_GROUPS:-2}"
